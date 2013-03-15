@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/background"
+              android:orientation="vertical">
+
+    <RelativeLayout
+            android:id="@+id/tab_home"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignTop="@+id/ivIPapLogo"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginRight="-40dp"
+                android:layout_marginTop="90dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_items"/>
+
+        <ImageView
+                android:id="@+id/ivIPapLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ipap_logo"/>
+
+        <TextView
+                android:id="@+id/selected_content_path"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/btnTakeVideo"
+                android:text="Select image or video first"
+                android:visibility="gone"/>
+
+        <Button
+                android:id="@+id/btnSelectPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivIPapLogo"
+                android:layout_toRightOf="@+id/btnTakePicture"
+                android:background="#00ffffff"
+                android:drawableTop="@drawable/btn_upload_custom"
+                android:gravity="center|center_vertical"
+                android:onClick="select"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="upload"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+        <Button
+                android:id="@+id/btnTakePicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btnSelectPicture"
+                android:layout_alignBottom="@+id/btnSelectPicture"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#00ffffff"
+                android:drawableTop="@drawable/btn_take_pic_custom"
+                android:gravity="center|center_vertical"
+                android:onClick="takePhoto"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text=" snap a celeb "
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+        <Button
+                android:id="@+id/btnTakeVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btnTakePicture"
+                android:layout_alignBottom="@+id/btnTakePicture"
+                android:layout_toLeftOf="@+id/btnTakePicture"
+                android:background="#00ffffff"
+                android:drawableTop="@drawable/btn_take_vid_custom"
+                android:gravity="center|center_vertical"
+                android:onClick="recordVideo"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text=" take video "
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+        <ImageView
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:src="@drawable/iso_logo"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dip"
+                android:layout_marginBottom="5dip"
+                />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/tab_earn"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignTop="@+id/ivIPapLogo"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginRight="-40dp"
+                android:layout_marginTop="90dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_items"/>
+
+        <ImageView
+                android:id="@+id/ivIPapLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ipap_logo"/>
+
+        <ImageView
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:src="@drawable/iso_logo"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dip"
+                android:layout_marginBottom="5dip"
+                />
+
+        <WebView
+                android:id="@+id/earn_web_view"
+                android:background="@color/webview_bg_transparency"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/tab_about"
+            android:layout_width="fill_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignTop="@+id/ivIPapLogo"
+                android:layout_marginLeft="-40dp"
+                android:layout_marginRight="-40dp"
+                android:layout_marginTop="90dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_items"/>
+
+        <ImageView
+                android:id="@+id/ivIPapLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ipap_logo"/>
+
+        <ImageView
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:src="@drawable/iso_logo"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dip"
+                android:layout_marginBottom="5dip"
+                />
+
+        <WebView
+                android:id="@+id/about_web_view"
+                android:background="@color/webview_bg_transparency"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <Button
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/tabs_home_custom"
+                android:onClick="tabHome"
+                android:minHeight="@dimen/button_height"
+                />
+
+        <Button
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="1px"
+                android:layout_marginRight="1px"
+                android:layout_weight="1"
+                android:background="@drawable/tabs_earn_custom"
+                android:onClick="tabEarn"
+                android:minHeight="@dimen/button_height"
+                />
+
+        <Button
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/tabs_info_custom"
+                android:onClick="tabAbout"
+                android:minHeight="@dimen/button_height"
+                />
+    </LinearLayout>
+
+</LinearLayout>
